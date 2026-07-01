@@ -1,0 +1,1 @@
+{"virtualbox":{"/opt/scripts":{"guestpath":"/opt/scripts","hostpath":"C:/Users/koyun/OneDrive/Desktop/vagrant-vms/myvms/scripts","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/koyun/OneDrive/Desktop/vagrant-vms/myvms","disabled":false,"__vagrantfile":true}}}

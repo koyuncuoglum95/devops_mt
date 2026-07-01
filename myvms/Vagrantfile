@@ -1,0 +1,21 @@
+# Configure Vagrant VM with Ubuntu Jammy image
+Vagrant.configure("2") do |config|
+  # Set the base box image
+  config.vm.box = "ubuntu/jammy64"
+
+  # Configure private network with static IP address
+  config.vm.network "private_network", ip: "192.168.56.17"
+  # Configure public network with bridged adapter for external access
+  config.vm.network "public_network", bridge: "en0: Ethernet"
+  
+  # Sync folder from host scripts to guest /opt/scripts
+  config.vm.synced_folder "scripts", "/opt/scripts"
+  
+  # VirtualBox provider settings
+  config.vm.provider "virtualbox" do |vb|
+    # Allocate 1GB of memory to the VM
+    vb.memory = 1024
+    # Allocate 2 CPU cores to the VM
+    vb.cpus = 2
+  end
+end
